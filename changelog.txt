@@ -1,0 +1,160 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2020-11-28
+  Features:
+    - Introduces a new setting to define the behavior of the shortcut. When enabled (Default: 
+      false) it will close the UI by pressing the shortcut. Default-behavior is still the same: 
+      focus on the input-field.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2020-11-24
+  Info:
+    - Updated the version for Factorio 1.1 Experimental Branch
+---------------------------------------------------------------------------------------------------
+Version: 0.18.7
+Date: 2020-06-25
+  Changes:
+    - Updated the thumbnail on the mods page
+  Bugfixes:
+    - Bugfixes UI style for 0.18.33 update
+---------------------------------------------------------------------------------------------------
+Version: 0.18.6
+Date: 2020-06-11
+  Bugfixes:
+    - Percentage calculations Bugfixes; big thanks to GWulf for raising the issue and also 
+      providing the fix for it <3
+
+---------------------------------------------------------------------------------------------------
+Version: 0.18.5
+Date: 2020-06-08
+  Info:
+    - Features some fancy sound effects and a special [Nilaus](https://www.youtube.com/c/Nilaus) 
+      mode.
+  Features:
+    - Features sound effects to the calculator whenever a result may be not the desired one (has be
+      enabled in the settings)
+  Changes:
+    - Emotes will no longer be displayed at default, "Nilaus mode" has to be enabled for the emotes
+      to appear again
+  Bugfixes:
+    - Recent results weren't properly cleared in 0.18.4
+  Other:
+    - Some code rework, not too fancy stuff
+
+---------------------------------------------------------------------------------------------------
+Version: 0.18.4
+Date: 2020-06-07
+  Info:
+    - Based on user feedback updated the mod
+  Features:
+    - Features the possibility to copy the results (from recent and also the current) to the
+      display
+  Changes:
+    - Window now remember last location when opened
+    - Updated the BS button (it's backspace people...) so it now has a nice icon instead of the
+      letters
+    - Recent results now add to the top, instead of the bottom
+    - When calculator is opened it focues on the display for entering the equation
+    - You can click pretty much anywhere now and it focues on the display for entering the equation
+  Bugfixes:
+    - On multiplayer session the window would lag behind while dragging, because the location would
+      be saved on server. This isn't going to happen anymore, hopefully (not tested yet).
+    - When window is moved out of boundaries, when reopened, it will correct itself to be fully in
+      sight again.
+    - Settings had weird default values (were set 2 times)
+
+---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 2020-06-07
+  Info:
+    - A small visual overhaul of the mod
+  Features:
+    - Features the possibility to "calculate further" (especially usefull when setting "Clear
+      equation on calculation" is set). When the equation doesn't start with a number, character or
+      parenthesis (so it assumes it starts with a math symbol) it will take the previous result and
+      prepend it to the current equation.
+  Changes:
+    - Updated the UI a bit to match it in color a bit more to the Windows calculator
+    - Updated also the icon on the shortcut to better distinguish it
+
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 2020-06-06
+  Info:
+    - Based on user feedback updated the mod
+  Features:
+    - new easter egg :-)
+    - Features more math.lib functions
+      - atan2() -> math.atan2()
+      - cosh() -> math.cosh()
+      - sinh() -> math.sinh()
+      - tanh() -> math.tanh()
+      - log10() -> math.log10()
+      - fmod() -> math.fmod()
+      - frexp() -> math.frexp()
+      - ldexp() -> math.ldexp()
+      - pow() -> math.pow()
+  Bugfixes:
+    - Interpreting ";" as "," in the equation, because of the fix in 0.18.1, so that math functions
+      with more than 1 parameter work. They have to use ";" as a separator for inputs
+    - Bugfixes sqrt(-1) equaling "na" because of the rounding fix from 0.18.1. It does now show
+      "NaN" again
+
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 2020-06-06
+  Info:
+    - Based on user feedback updated the mod
+  Features:
+    - Shortcut for opening the calculator and automatically focus on the input (Default:
+      Ctrl+Shift+C) 
+  Bugfixes:
+    - Rounding removed 0 at the end, will now stand as it should. So 2.0000001 -> 2.00
+    - Interpreting "," as "." in the equation, because of some European countries do have a weird
+      keyboard layout
+
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 2020-06-06
+  Info:
+    - Initial Release of the mod 
+    - Compatible with Factorio >0.18.0; tested on 0.18.30
+    - Based on the 4-Function Calculator found in the 
+      [Max Rate Calculator](https://mods.factorio.com/mod/MaxRateCalculator) mod by
+      [Theanderblast](https://mods.factorio.com/user/theanderblast)
+  Features:
+    - History of recent calculations
+    - Possibility to copy recent calculations to the current one (with shift+left-click)
+    - Substitutes some functions & "constants" of the Lua
+      [math-lib](http://lua-users.org/wiki/MathLibraryTutorial)
+      - abs() -> math.abs()
+      - acos() -> math.acos()
+      - asin() -> math.asin()
+      - atan() -> math.atan()
+      - ceil() -> math.ceil()
+      - floor() -> math.floor()
+      - cos() -> math.cos()
+      - sin() -> math.sin()
+      - tan() -> math.tan()
+      - deg() -> math.deg()
+      - rad() -> math.rad()
+      - exp() -> math.exp()
+      - log() -> math.log()
+      - min() -> math.min()
+      - max() -> math.max()
+      - modf() -> math.modf()
+      - sqrt() -> math.sqrt()
+      - huge -> math.huge
+      - pi -> math.pi
+    - Allows the use of "%" (percent sign) in the calculation
+    - A little easter egg :-)
+    - Setting for number of decimal places in result (Default: 2). Exact value will be displayed in
+      the tooltip
+    - Setting if triggering the calculation should clear the current equation (Default: no)
+  Changes:
+    - Made the buttons slightly bigger, so that it's better readable on streams.
+    - Allows to make "complex" calculations with parentheses
+    - Allows pretty much all characters in the equation field
+      - but the "=" (equal sign) will trigger the calculation
+  Ease of use:
+    - Got rid of the memory functions - but introduced the list of recent calculations instead
